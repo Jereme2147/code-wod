@@ -1,0 +1,779 @@
+// styles are divided up by sections. Navigation, banner, Content, Footer
+$black: rgba(1, 22, 39, 1);
+$red: rgba(247, 23, 53, 1);
+$blue: rgba(65, 234, 212, 1);
+$white: rgba(253, 255, 252, 1);
+$orange: rgba(255, 159, 28, 1);
+$grey: darken(white, 10%);
+$submit: rgb(52, 81, 163);
+
+$cursive: 'Merienda One', cursive;
+$body: 'Roboto Condensed', sans-serif;
+$title: 'Roboto', sans-serif;
+
+@mixin tablet {
+    @media (min-width: 600px) and (max-width: 949px) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: 950px) {
+        @content;
+    }
+}
+@mixin large-desktop {
+    @media (min-width: 1300px) {
+        @content;
+    }
+}
+body,
+html {
+    height: 100%;
+    margin: 0;
+
+    h1,
+    h3 {
+        margin: 0;
+    }
+}
+
+body {
+    background: $white url('./img/flag420.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    @include desktop() {
+        background: $white url('./img/flag950.png');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: 100% 60%;
+    }
+}
+// Begin search style ***************************************************
+#search-div {
+    opacity: 0;
+    position: fixed;
+    z-index: 50;
+    top: 55px;
+    width: 100%;
+    height: 30px;
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    
+    @include desktop() {
+        justify-content: flex-end;
+        padding-right: 20px;
+        top: 75px;
+        height:50px;
+        // text-align: center;
+    }
+    .search-box {
+        background: $white;
+        border-radius: 3px;
+        border: none;
+    }
+}
+#mobile-search {
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
+// end search style ***************************************************
+// Begin Navigation style ***************************************************
+#desktop-nav {
+    display: none;
+    @include desktop() {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        // justify-content: space-around;
+        background: linear-gradient(to right, $grey 10%,$white 70%); 
+        width: 100%;
+        height: 75px;
+        h1 {
+            width: 30%;
+            font-size: 40px;
+            text-shadow: 1px 1px 1px lighten($red, 30%);
+                        
+        }
+    }
+}
+
+#menu-icon {
+    height: 100%;
+    padding: 5px 10px 5px 5px;
+    margin-top: auto;
+
+    i {
+        font-size: 35px;
+    }
+}
+
+
+
+// pop up menu 
+#mobile-menu {
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    position: fixed;
+    top: 55px;
+    left: 0;
+    z-index: 99;
+    transition: 0.4s;
+    transition: 0.6s opacity;
+    background: $black;
+    color: $white;
+    text-align: center;
+    ul {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        justify-content: space-around;
+        font-family: $title;
+        font-weight: bold;
+    }
+    ul li a {
+        color: $white;
+        text-decoration: none;
+    }
+
+}
+// does not show on larger than tablet
+#mobile-nav {
+    background: linear-gradient(to right, $grey 5%,$white 70%); 
+    width: 100%;
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        text-shadow: 2px 2px 2px $white;
+    }
+    @include desktop() {
+        display: none;
+    }
+}
+#mobile-nav h1, #desktop-nav h1 {
+    font-family: $cursive;
+    color: $black;
+}
+// container for both navs mobile and desktop
+nav {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid $black;
+}
+
+#nav-center {
+    text-align: center;
+    @include desktop() {
+        width: 30%;
+    }
+    h2 a{
+        text-decoration: none;
+        color: $black;
+        transition: 0.4s;
+        cursor: pointer;
+        font-family: $title;
+        font-weight: bold;
+        &:hover {
+            color: $red;
+        }
+    }
+    
+}
+#nav-right {
+    @include desktop(){
+        // width: 30%;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        font-family: $title;
+        font-weight: bold;
+    }
+    ul a, ul i {
+        padding: 10px 15px;
+        color: $black;
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.4s;
+        // font-size: 30px;
+        &:hover {
+            color: $red;
+        }
+    }
+    ul div {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        font-size: 20px;
+    }
+}
+.page-selected {
+    border-left: 2px solid $red;
+    border-right: 2px solid $red;
+    padding: 0 4px;
+}
+// End navigation style **************************************
+
+// Begin Banner style ****************************************
+#banner {
+    background:url('../img/flag420.png');
+    background-size: contain;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 175px;
+    z-index: 0;
+    top: 55px;
+
+    @include desktop(){
+        display: none;
+    }
+}
+
+#logo-div {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    img {
+        margin-top: 65px;
+        width: 80%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px $black;
+    }
+    @include desktop() {
+        height: 400px;
+        img{
+            width: 50%;
+            margin-top: 150px;
+        }
+    }
+}
+// positions start beneath nav bar
+#top-space {
+    width: 100%;
+    height: 55px;
+    @include desktop() {
+        height: 75px;
+    }
+}
+// End Banner style ****************************************
+
+
+// Begin Container style ****************************************
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+// End Container style ****************************************
+// begin sections style ****************************************
+#article-title {
+    width: 45%;
+    text-align: center;
+    border-left: 2px solid $red;
+    border-right: 2px solid $red;
+    margin-top: 20px;
+    transition: 0.4s;
+    // background: $white;
+    h2 {
+        font-family: $title;
+        color: $black;
+        text-shadow: 2px 2px 1px $white;
+    }
+    @include desktop(){
+        width: 25%;
+        h2 {
+            font-size: 35px;
+        }
+    }
+    &:hover {
+        border-left: 15px solid $red;
+        border-right: 15px solid $red;
+        width: 50%;
+    }
+}
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    @include desktop() {
+        width: 85%;
+        max-width: 1100px;
+    }
+    @include large-desktop(){
+        width: 75%;
+    }
+}
+.section-divider {
+    padding-bottom: 20px;
+}
+.summary {
+    width: 100%;
+    // height: 450px;
+    text-align: center;
+    h3 {
+        font-family: $body;
+        font-size: 15px;
+        padding: 5px;
+        // color: $black;
+        color: $white;
+    }
+    p {
+        font-family: $body;
+        font-size: 15px;
+        color: $black;
+        padding: 5px;
+    }
+    @include desktop() {
+        width: 45%;
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            font-size: 15px;
+            padding: 5px 20px;
+        }
+    }
+    img {
+        width: 25%;
+        margin-top: 5px;
+    }
+}
+
+.summary-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.summary-section {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    @include desktop(){
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+.title-division {
+    border-bottom: 1px solid $black;
+    background: $black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.todays-workout {
+    width: 95%;
+    // background: linear-gradient(to right, $grey 10%,$white 70%);
+    h3 {
+        font-family: $body;
+        font-size: 15px;
+        padding: 5px;
+        // color: $black;
+        color: $white;
+    }
+    p {
+        font-family: $body;
+        font-size: 15px;
+        color: $black;
+        padding: 5px;
+    }
+    @include desktop() {
+        h3 {
+            font-size: 30px;
+        }
+        p {
+            font-size: 20px;
+            padding: 5px 20px;
+        }
+    }
+}
+#wod-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.wods {
+    // background: linear-gradient(to right, $grey 10%,$white 70%);
+    background: $white;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: 1px solid $black;
+    // text-align: center;
+    img {
+        width: 100%;
+    }
+}
+.no-link {
+    a {
+        color: $black;
+        text-decoration: none;
+        transition: 0.4s color;
+        &:hover {
+            color: $red;
+        }
+    }
+}
+// End sections style ****************************************
+// Begin footer style **********************************
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    @include desktop() {
+        flex-direction: row;
+    }
+}
+.footer-ispage {
+    background: lighten($black, 10%);
+    border-radius: 2px;
+}
+#footer-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: $black;
+    color: $white;
+    align-items: center;
+    font-family: $title;
+    @include desktop() {
+        width: 50%;
+        font-size: 25px;
+        
+    }
+    ul {
+        // width: 40%;
+        list-style: none;
+    }
+    ul a{
+        text-decoration: none;
+        color: $white;
+        padding: 5px;
+        
+    }
+    ul li {
+        transition: 0.4s;
+        &:hover {
+            border-left: 3px solid $red;
+            border-right: 3px solid $red;
+        }
+
+    }
+}
+#footer-social {
+    width: 100%;
+    background: $white;
+    color: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
+    border-top: 3px solid $black;
+    
+    i {
+        padding: 20px;
+        color: $black;
+        transition: 0.4s;
+        &:hover {
+            color: $red;
+        }
+    }
+    @include desktop() {
+        width: 50%;
+    }
+}
+// End footer style ******************************
+
+// begin comments style ******************************
+.comments {
+    margin-top: 10px;
+}
+.all-comments {
+    padding-left: 0;
+    li {
+        list-style: none;
+        border-top: 1px solid $black;
+    }
+    .comment-meta {
+        background: $black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            padding: 10px;
+            color: $white;
+        }
+    }
+    .vcard {
+        color: $white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        margin-right: 8px;
+    }
+    .photo {
+        display: none;
+    }
+    .says {
+        display: none;
+    }
+    .reply {
+        font-weight: bold;
+        margin-left: 10px;
+        padding-bottom: 5px;
+        a {
+            color: $black;
+            transition: 0.4s;
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+    .children {
+        margin-top: 16px;
+        li {
+            border-left: 1px solid $black;
+        }
+    }
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid $black;
+
+    textarea {
+        width: 95%;
+        @include desktop() {
+            width: 80%;
+        }
+    }
+
+    textarea, input {
+        font-family: 'Roboto Condesed', sans-serif;
+        font-size: 20px;
+        // border: none;
+    }
+    input label p{
+        font-size: 15px;
+    }
+}
+.comment-login {
+    width: 90%;
+    margin-top: 10px;
+    @include desktop() {
+        width: 60%;
+        // align-self: flex-start;
+    }
+}
+.form-submit {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#submit {
+    width: 50%;
+    @include desktop(){
+        width: 25%;
+    }
+    background: $submit;
+    color: $white;
+    padding: 5px;
+    font-family: $title;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px $black;
+    border: none;
+    transition: 0.4s;
+    &:hover {
+        // background: $red;
+        @include desktop() {
+            width: 30%;
+        }
+    }
+}
+
+// end comments style ******************************
+// Start About page style ******************************
+#about {
+
+}
+// end About page style ******************************
+// Start generic page style ******************************
+.article-div {
+    background: $white;
+    width: 95%;
+    border-radius: 2px;
+    padding: 20px 10px;
+    margin: 10px 15px;
+    color: $black;
+    line-height:1.5em;
+    // border-left: 3px solid $black;
+    box-shadow: -5px 5px 5px $grey;
+    p {
+        font-family: $body;
+    }
+    h2, h1, h3 {
+        font-family: $title;
+    }
+}
+// end generic page style ******************************
+// Start 404 page style ******************************
+#error-404 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $white;
+    color: $black;
+    border: 1px solid $grey;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+// End 404 page style ******************************
+// Begin search page style ******************************
+.search-display {
+    @include desktop(){
+        width: 80%;
+    }
+    width: 95%;
+    // border: 1px solid $grey;
+    background: $white;
+    border-radius: 3px;
+    box-shadow: 4px 4px 2px $grey;
+    margin-bottom: 20px;
+    h3 {
+        font-family: $title;
+        color: $black;
+    }
+    a:first-child, a:last-child{
+        text-decoration: none;
+    }
+
+}
+.search-result {
+    margin: 10px 20px 30px 20px;
+    border-bottom: 1px solid $black;
+    padding-bottom: 10px;
+}
+// End search page style ******************************
+
+// Start Contact page style ******************************
+#contact-text {
+    padding: 5px;
+    border-bottom: 1px solid $red;
+    @include desktop() {
+        width: 50%;
+        border-right: 1px solid $red;
+        border-bottom: none;
+    }
+    :first-child {
+        text-align: center;
+    }
+    :last-child {
+        text-align: center;
+    }
+}
+
+#contact-submit {
+    display: flex;
+    justify-content: center;
+    button {
+        background: $submit;
+        width: 30%;
+        height: 25px;
+        color: $white;
+        border-radius: 5px;
+        font-size: 15px;
+        font-family: $title;
+        transition: 0.6s;
+        cursor: pointer;
+        box-shadow: 2px 2px 4px lighten(black, 20%);
+        &:hover{
+            width: 40%;
+            // text-transform: uppercase;
+        }
+    }
+}
+#contact-body {
+    background: $white;
+}
+#full-form { 
+    width: 95%;
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    
+    // border: 1px solid $black;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    @include desktop() {
+        flex-direction: row;
+        width: 80%;
+    }
+    form {
+        margin-top: 20px;
+        width: 100%;
+        input, textarea {
+                font-family: $body;
+                width: 90%;
+                margin: 3px 5%;
+                background: linear-gradient(to right, $grey 0%,rgba(255,255,255,0) 100%); 
+                border-radius: 3px;
+                transition: 0.4s;
+                
+                &:hover {
+                    // border: 1px solid $red;
+                    background: linear-gradient(to right, lighten($orange, 30%) 0%,rgba(255,255,255,0) 100%); 
+                }
+            }
+        @include desktop() {
+            width: 50%;
+            margin-top: 0;
+        }
+    }
+}
+
+// End Contact page style ******************************
+
+// Begin Custom banner style ******************************
+// End custom banner style ******************************
+.custom-banner {
+    img {
+        width: 100%;
+    }
+    width: 100%;
+    @include desktop() {
+        img {
+            width: 100%;
+        }
+    }
+} 
