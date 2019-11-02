@@ -55,7 +55,6 @@ else if ($_POST['submitted']) my_contact_form_generate_response("error", $missin
  get_header('contact'); 
 
     ?>
-  page-contact.php
   <div id="full-form">
       <div id="contact-text">
           <h3>Get in touch!</h3>

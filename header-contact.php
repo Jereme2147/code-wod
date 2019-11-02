@@ -63,7 +63,7 @@
         </div> -->
 
         <div id="contact-logo-div" class="custom-banner">
-              <!-- inserted from JS -->
+            <img src="<?php echo get_template_directory_uri();?>/img/BB1900-thin.png" alt="">
         </div>
         
         <main>

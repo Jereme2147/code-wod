@@ -6,12 +6,12 @@ const mobileSearch = document.getElementById("mobile-search");
 let desktop = window.matchMedia("(min-width: 600px)");
 
 
-if (chkObject("contact-logo-div")){
-    customBanner("contact-logo-div");
-}
-if (chkObject("resource-logo-div")) {
-    customBanner("resource-logo-div");
-}
+// if (chkObject("contact-logo-div")){
+//     customBanner("contact-logo-div");
+// }
+// if (chkObject("resource-logo-div")) {
+//     customBanner("resource-logo-div");
+// }
 menuIcon.addEventListener('click', function () {
     if (mobileMenu.style.opacity == "1") {
         mobileMenu.style.opacity = '0';

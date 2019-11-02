@@ -63,7 +63,8 @@
         </div> -->
 
         <div id="resource-logo-div" class="custom-banner">
-              <!-- inserted from JS -->
+            
+            <img src="<?php echo get_template_directory_uri();?>/img/resources900.png" alt="">
         </div>
         
         <main>
