@@ -50,5 +50,20 @@ function mySearchFilter($articleQuery) {
 };
 
 add_filter('pre_get_posts','mySearchFilter');
+// add_filter( 'comment_form_default_fields', 'tu_comment_form_change_cookies_consent' );
+// function tu_comment_form_change_cookies_consent( $fields ) {
+// 	$commenter = wp_get_current_commenter();
+
+// 	$consent   = empty( $commenter['comment_author_email'] ) ? '' : ' checked="checked"';
+
+// 	$fields['cookies'] = '<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"' . $consent . ' />' .
+// 					 '<label for="wp-comment-cookies-consent">Your modified text here</label></p>';
+// 	return $fields;
+// }
+// add_filter( 'comment_form_default_fields', 'tu_comment_form_hide_cookies_consent' );
+// function tu_comment_form_hide_cookies_consent( $fields ) {
+// 	unset( $fields['cookies'] );
+// 	return $fields;
+// }
 
 ?>
