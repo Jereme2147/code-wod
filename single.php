@@ -48,7 +48,7 @@
                          'title_reply' => 'Share your thoughts',
                          'fields' => $fields,
                         'comment_field' =>  '<textarea placeholder = "Your comment" id="comment" name="comment" cols="45" rows="8" aria-required = "true">'. '</textarea>',
-                        'comment_notes_before' => '<p class="comment-notes">Your email not published. All fields requrired.</p>'
+                        'comment_notes_before' => '<p class="comment-notes">Your email not published. All fields required.</p>'
                     );
                     comment_form($args);
                     $comments_number = get_comments_number();
