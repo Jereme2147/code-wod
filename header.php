@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Merienda+One|Roboto|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link href="./style.css" rel="stylesheet"> -->
+    
     <?php wp_head();?>
-    <title>Code-wod Workouts for Firefighters Police EMS Military and everyone else</title>
+    <title>Code-wod | Workouts for Firefighters | Police | EMS | Military and everyone else</title>
+    <meta name="description" content="Free First Responder workouts. Workouts for people with minimal time and equeipment.">
+    <script data-ad-client="ca-pub-3519329254611036" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </head>
 <body>

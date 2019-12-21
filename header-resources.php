@@ -64,7 +64,7 @@
 
         <div id="resource-logo-div" class="custom-banner">
             
-            <img src="<?php echo get_template_directory_uri();?>/img/resources900.png" alt="">
+            <img src="<?php echo get_template_directory_uri();?>/img/resources900.jpg" alt="">
         </div>
         
         <main>

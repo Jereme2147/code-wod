@@ -38,12 +38,12 @@ html {
 }
 
 body {
-    background: $white url('./img/flag420.png');
+    background: $white url('./img/flag420.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: 100%;
     @include desktop() {
-        background: $white url('./img/flag950.png');
+        background: $white url('./img/flag950.jpg');
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: 100% 60%;
