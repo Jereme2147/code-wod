@@ -11,7 +11,7 @@
                 <div class="title-division">
                     <h3><?php echo get_the_date();?></h3>
                     <!-- <h3>Feature Workout</h3> -->
-                    <h3>Posted by Jereme daniels</h3>
+                    <h3><?php echo get_the_title() ?></h3>
                 </div>
                 <div id="workout">
                     <p><?php

@@ -38,11 +38,11 @@
                             'author' =>
                                 
                                 '<input placeholder="Name" class="comment-login" id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) .
-                                '" size="30"' . $aria_req . ' />',
+                                '" size="30"' . $aria_req . ' />'
 
-                            'email' =>
-                                '<input placeholder="Email" class="comment-login" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
-                                '" size="30"' . $aria_req . ' />',
+                            // 'email' =>
+                            //     '<input placeholder="Email" class="comment-login" id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+                            //     '" size="30"' . $aria_req . ' />',
                             );
                     $args = array(
                          'title_reply' => 'Share your thoughts',

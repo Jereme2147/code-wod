@@ -65,5 +65,20 @@ add_filter('pre_get_posts','mySearchFilter');
 // 	unset( $fields['cookies'] );
 // 	return $fields;
 // }
+add_action('after_setup_theme', 'wpb_remove_admin_bar');
+  
+function wpb_remove_admin_bar() {
+if (!current_user_can('administrator') && !is_admin()) {
+  show_admin_bar(false);
+}
+}
+
+function my_login_redirect( $redirect_to, $request, $user ) {
+    $redirect_to =  home_url();
+ 
+    return $redirect_to;
+}
+ 
+add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
 
 ?>

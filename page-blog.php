@@ -3,7 +3,7 @@
 ?>
 <section class="summary-section section-divider">
 <?php
- $the_query = new WP_Query( array('posts_per_page'=>3,
+ $the_query = new WP_Query( array('posts_per_page'=>10,
                                  'post_type'=>'post',
                                  'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
                             ); 

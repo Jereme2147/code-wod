@@ -10,7 +10,7 @@
                 <div class="title-division">
                     <h3><?php echo get_the_date();?></h3>
                     <!-- <h3>Feature Workout</h3> -->
-                    <h3>Posted by <?php echo get_the_author();?></h3>
+                    <h3><?php echo get_the_title();?></h3>
                 </div>
                 <div id="workout">
                     <p><?php
@@ -31,7 +31,7 @@
                     <div class="title-division">
                         <h3><?php echo get_the_date();?></h3>
                         <!-- <h3>One Back</h3> -->
-                        <h3>Posted by <?php echo get_the_author();?></h3>
+                        <h3><?php echo get_the_title();?></h3>
                     </div>
                     <div class="summary-content">
                         <p>
