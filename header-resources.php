@@ -21,4 +21,4 @@
             <img src="<?php echo get_template_directory_uri();?>/img/resources900.jpg" alt="">
         </div>
         
-        <main>
+        <main> 

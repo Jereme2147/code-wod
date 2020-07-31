@@ -15,6 +15,7 @@
     <?php 
         require_once(plugin_dir_path(__FILE__) . '/assets/header-guts.php');
     ?>
+    
         <div id="logo-div">
             <img src="<?php echo get_template_directory_uri(); ?>/img/logo900.png" alt="">
         </div>

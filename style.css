@@ -339,6 +339,16 @@ nav {
           align-items: center;
 }
 
+.page-heading {
+  background: #fdfffc;
+  padding: 10px;
+  border-radius: 5px;
+  text-shadow: 2px 2px 2px #e6e6e6;
+  -webkit-box-shadow: 2px 2px 6px #4d4d4d;
+          box-shadow: 2px 2px 6px #4d4d4d;
+  color: #ff9f1c;
+}
+
 #article-title {
   width: 45%;
   text-align: center;
