@@ -34,7 +34,9 @@ function codewod_custom_post_type() {
         'has_archive' => true,
         'supports' => array(
             'title', 'thumbnail', 'editor', 'excerpt', 'comments'
-        )
+        ),
+        'show_in_rest' => true,
+        'supports' => array('editor')
         ));
 }
 add_action('init', 'codewod_custom_post_type');

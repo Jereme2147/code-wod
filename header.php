@@ -9,7 +9,15 @@
     <title>Code-wod | Workouts for Firefighters | Police | EMS | Military and everyone else</title>
     <meta name="description" content="Free First Responder workouts. Workouts for people with minimal time and equeipment.">
     <script data-ad-client="ca-pub-3519329254611036" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-154969187-5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-154969187-5');
+</script>
 </head>
 <body>
     <?php 

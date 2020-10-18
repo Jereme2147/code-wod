@@ -38,15 +38,15 @@ html {
 }
 
 body {
-    background: $white url('./img/flag420.jpg');
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 100%;
+    // background: $white url('./img/flag420.jpg'); *uncomment for back ground
+    // background-attachment: fixed; *uncomment for back ground
+    // background-repeat: no-repeat; *uncomment for back ground
+    background: #f4a261;
     @include desktop() {
-        background: $white url('./img/flag950.jpg');
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-size: 100% 60%;
+        // background: $white url('./img/flag950.jpg'); *uncomment for back ground
+        // background-attachment: fixed; *uncomment for back ground
+        // background-repeat: no-repeat;*uncomment for back ground
+        // background-size: 100% 60%;
     }
 }
 // Begin search style ***************************************************
@@ -238,15 +238,15 @@ nav {
 
 // Begin Banner style ****************************************
 #banner {
-    background:url('../img/flag420.png');
+    // background:url('../img/flag420.png');
     background-size: contain;
     background-attachment: fixed;
     background-repeat: no-repeat;
     position: fixed;
-    width: 100%;
-    height: 175px;
-    z-index: 0;
-    top: 55px;
+    // width: 100%;
+    // height: 175px;
+    // z-index: 0;
+    // top: 55px;
 
     @include desktop(){
         display: none;
