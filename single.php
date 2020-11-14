@@ -62,9 +62,11 @@
                                         'post_id' => $post->ID,
                                         'status' => 'approve'
                                     ));
+                                //    echo count_user_posts($post_type = 'post'); 
                                     wp_list_comments(array(
                                         'per_page' => 15
                                     ), $comments);
+                                   
                                 ?>
                             </ol>
                             </div>

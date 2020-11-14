@@ -703,6 +703,7 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 8px;
+  text-decoration: none;
 }
 
 .all-comments .photo {

@@ -9,6 +9,8 @@ function codewod_setup() {
 }
 
 add_action('wp_enqueue_scripts', 'codewod_setup');
+// require_once get_theme_file_uri( '/better-comments.php' );
+require_once get_parent_theme_file_path( '/better-comments.php' );
 
 function codewod_init() {
     add_theme_support('post-thumbnails');
@@ -35,8 +37,7 @@ function codewod_custom_post_type() {
         'supports' => array(
             'title', 'thumbnail', 'editor', 'excerpt', 'comments'
         ),
-        'show_in_rest' => true,
-        'supports' => array('editor')
+        'show_in_rest' => true
         ));
 }
 add_action('init', 'codewod_custom_post_type');
@@ -83,4 +84,18 @@ function my_login_redirect( $redirect_to, $request, $user ) {
  
 add_filter( 'login_redirect', 'my_login_redirect', 10, 3 );
 
+function commentCount() {
+    global $wpdb;
+    $comAuth = get_comment_author_email();
+    $tempCount = 0;
+    if( $comAuth == 'jereme.daniels@gmail.com'){
+        $tempCount = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . 'jereme@jeremedaniels.com' . '"');    
+    }
+    $count = $wpdb->get_var('SELECT COUNT(comment_ID) FROM ' . $wpdb->comments. ' WHERE comment_author_email = "' . get_comment_author_email() . '"');
+    echo $count + $tempCount . ' comments';
+}
+add_filter( 'wp_list_comments_args', function( $args ) {
+    $args[ 'callback' ] = 'better_comments';
+	return $args;
+} );
 ?>
