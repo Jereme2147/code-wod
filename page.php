@@ -2,7 +2,6 @@
         while(have_posts()) {
             the_post();
     ?>
-    page.php
  <h2 class="page-heading"><?php the_title(); ?> </h2>
             <section class="wods todays-workout">
             <?php

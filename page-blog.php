@@ -1,6 +1,6 @@
  <?php get_header(); 
 
-?>
+?><h1>page.blog</h1>
 <section class="summary-section section-divider">
 <?php
  $the_query = new WP_Query( array('posts_per_page'=>10,
