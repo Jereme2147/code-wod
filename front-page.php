@@ -35,7 +35,7 @@
                     </div>
                     <div class="summary-content">
                         <p>
-                        <?php echo wp_trim_words(get_the_excerpt(), 10); ?>
+                        <?php echo wp_trim_words(get_the_excerpt(), 150); ?>
                         </p>
                     </div>
                     <div class="summary-links no-link">
