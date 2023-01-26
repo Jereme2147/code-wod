@@ -4,6 +4,7 @@ $red: rgba(247, 23, 53, 1);
 $blue: rgba(65, 234, 212, 1);
 $white: rgba(253, 255, 252, 1);
 $orange: rgba(255, 159, 28, 1);
+// $orange: #b5d0e5; 
 $grey: darken(white, 10%);
 $submit: rgb(52, 81, 163);
 
@@ -41,7 +42,7 @@ body {
     // background: $white url('./img/flag420.jpg'); *uncomment for back ground
     // background-attachment: fixed; *uncomment for back ground
     // background-repeat: no-repeat; *uncomment for back ground
-    background: #f4a261;
+    background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 59%);;
     @include desktop() {
         // background: $white url('./img/flag950.jpg'); *uncomment for back ground
         // background-attachment: fixed; *uncomment for back ground

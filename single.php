@@ -3,7 +3,7 @@
             the_post();
     ?>
 <!-- single for single blogs or articles.  KEEP -->
- <h2 class="page-heading"><?php the_title(); ?> </h2>
+ <!-- <h2 class="page-heading"><?php //the_title(); ?> </h2> -->
             <section class="wods todays-workout">
             <?php
                 if (get_the_post_thumbnail_url(get_the_ID())) {
@@ -11,9 +11,10 @@
                 } 
             ?>
                 <div class="title-division">
-                    <h3><?php echo get_the_date();?></h3>
-                    <!-- <h3>Feature Workout</h3> -->
-                    <h3>Posted by <?php echo get_the_author();?></h3>
+                    <h3><?php echo get_the_date();?></h3> 
+                    <h3><?php echo the_title();?></h3>
+                    <!-- <h3><?php //echo get_title();?></h3> -->
+                    <h3>Author: <?php echo get_the_author();?></h3>
                 </div>
                 <div id="workout">
                     <p><?php

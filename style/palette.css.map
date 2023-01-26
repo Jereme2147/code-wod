@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,8EAA8E;AAE9E,SAAS;AAOT,SAAS",
-    "sources": [
-        "palette.scss"
-    ],
-    "names": [],
-    "file": "palette.css"
-}
+{"version":3,"sources":["palette.scss"],"names":[],"mappings":"AAAA,6EAAA;AAEA,QAAA;AAOA,QAAA","file":"palette.css"}
